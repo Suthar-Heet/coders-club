@@ -1,0 +1,626 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #000000;
+}
+
+/* Main Header */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Logo Section */
+.logo-left h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* On Logo Hover - Makes it slightly bigger */
+.logo-left h1:hover {
+  transform: scale(1.1);
+}
+
+/* Header Right Section */
+.header-right ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-right ul li {
+  margin: 0 20px;
+}
+
+.header-right ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Links */
+.header-right ul li a:hover {
+  color: #3498db; /* Blue color on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Sticky Header Effect on Scroll */
+.main-header.sticky {
+  background-color: #222;
+  padding: 10px 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-right ul {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    display: none;
+  }
+
+  .header-right ul li {
+    margin: 10px 0;
+  }
+
+  /* Display the menu when toggled */
+  .header-right.active ul {
+    display: flex;
+  }
+
+  /* Adjust logo size on mobile */
+  .logo-left h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* home page css */
+/* .home-warapper {
+  background-color: black;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  color: white;
+} 
+.container-home{
+    display: flex
+;
+    width: 50%;
+} */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Home Wrapper Section with Animated Gradient */
+.home-wrapper {
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
+  background-size: 400% 400%; /* Ensures the gradient moves */
+  animation: gradientAnimation 7s ease infinite; /* Animation applied */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Padding for small devices */
+}
+
+/* Keyframe for the Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container for Home Content */
+.container-home {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Main Section */
+.left-mainhome {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+/* Sub Left (Text and Button Section) */
+.sub-left {
+  text-align: left;
+  max-width: 500px;
+  color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Heading Styles */
+.sub-left h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+/* Paragraph Styling */
+.sub-left p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Button Styling */
+.sub-left button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.sub-left button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust text size and layout for smaller screens */
+  .sub-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .sub-left p {
+    font-size: 1rem;
+  }
+
+  .sub-left button {
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-left h1 {
+    font-size: 2rem;
+  }
+
+  .sub-left p {
+    font-size: 0.9rem;
+  }
+
+  .sub-left button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+/* Right Section Styling */
+.right-mainhome {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Image Styling */
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Image */
+.image-container:hover .main-image {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Overlay Text Styling */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0s 0.4s;
+}
+
+/* Overlay Text Appearance on Hover */
+.image-container:hover .overlay-text {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease, visibility 0s;
+}
+
+.overlay-text h3 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sub-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .sub-left p {
+    font-size: 1rem;
+  }
+
+  .sub-left button {
+    padding: 12px 25px;
+  }
+
+  .overlay-text h3 {
+    font-size: 2rem;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+  }
+}
+.center-text {
+  font-family: "Rubik Vinyl", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
+  animation: gradientAnimation 7s ease infinite;
+  color: white;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* About-us section */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Main About Us Section */
+.main-aboutus {
+    width: 100%;
+    height: auto; /* Full height of the viewport */
+    background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
+    background-size: 400% 400%; /* Ensures the gradient moves */
+    animation: gradientAnimation 7s ease infinite; /* Animation applied */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+/* Keyframe for the Background Animation */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+.aboutus-first {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.aboutus-first h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Rubik Vinyl", serif;
+    margin: 100px 0 0;
+}
+
+/* Container for Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px;
+}
+
+/* Image and Text Block */
+.first-image-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Make it responsive */
+}
+
+/* About Us Image Section */
+.aboutus-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.aboutus-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Text Section */
+.aboutus-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.aboutus-text h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.aboutus-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .first-image-text {
+        flex-direction: column;  /* Stack the image and text on smaller screens */
+        text-align: center;  /* Center-align text on small screens */
+    }
+
+    .aboutus-image {
+        max-width: 100%;  /* Make the image full width */
+        margin-bottom: 20px;
+    }
+
+    .aboutus-text {
+        max-width: 100%;  /* Make the text full width */
+    }
+}
+.aboutus-sub-text{
+    display: flex
+;
+    /* width: 50%; */
+    justify-content: space-between;
+    margin: 25px auto;
+}
+/* About Us Sub Text Section */
+.aboutus-sub-text {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Container for Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sub Text Block Styling (Flexbox) */
+.sub-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Ensures elements stack on smaller screens */
+}
+
+/* Left Text Section */
+.left-text {
+    flex: 1;
+    max-width: 45%;
+}
+
+.left-text h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Right Text Section */
+.right-text {
+    flex: 1;
+    max-width: 45%;
+}
+
+.right-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .sub-text {
+        flex-direction: column;  
+        text-align: center;  
+    }
+
+    .left-text,
+    .right-text {
+        max-width: 100%;  
+        margin-bottom: 20px; 
+    }
+}
+/* About Us Box Section */
+.aboutus-box {
+    padding: 40px 20px;
+  
+    text-align: center; 
+}
+
+/* Main Box Styling */
+.main-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Sub Box Styling */
+.sub-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sub-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styling (PNG images) */
+.icon {
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 95px;
+    height: 90px;
+    /* object-fit: contain; */
+    border: 2px solid black;
+    border-radius: 31px;
+}
+
+/* Heading and Paragraph Styling */
+.sub-box h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.sub-box p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .sub-box {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .main-box {
+        flex-direction: column;
+        align-items: center;
+    }
+}
