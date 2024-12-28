@@ -10,7 +10,6 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #000000;
-  color: #333;;
 }
 
 /* Main Header */
@@ -101,6 +100,18 @@ body {
 }
 
 /* home page css */
+/* .home-warapper {
+  background-color: black;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  color: white;
+} 
+.container-home{
+    display: flex
+;
+    width: 50%;
+} */
 /* General Reset */
 * {
   margin: 0;
@@ -117,13 +128,14 @@ body {
 /* Home Wrapper Section with Animated Gradient */
 .home-wrapper {
   width: 100%;
-  height: 100vh; 
+  height: 100vh; /* Full height of the viewport */
   background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
-  background-size: 400% 400%; 
-  animation: gradientAnimation 7s ease infinite; 
+  background-size: 400% 400%; /* Ensures the gradient moves */
+  animation: gradientAnimation 7s ease infinite; /* Animation applied */
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px; 
+  padding: 0 20px; /* Padding for small devices */
 }
 
 /* Keyframe for the Background Animation */
@@ -359,15 +371,22 @@ body {
   }
 }
 /* About-us section */
-
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
 /* Main About Us Section */
 .main-aboutus {
     width: 100%;
     height: auto; /* Full height of the viewport */
     background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
-    background-size: 400% 400%; 
-    animation: gradientAnimation 7s ease infinite; 
+    background-size: 400% 400%; /* Ensures the gradient moves */
+    animation: gradientAnimation 7s ease infinite; /* Animation applied */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -406,7 +425,7 @@ body {
 /* Container for Content */
 .container {
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto; /* Center the container */
     padding: 0 20px;
 }
 
@@ -416,7 +435,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Make it responsive */
 }
 
 /* About Us Image Section */
@@ -454,17 +473,17 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .first-image-text {
-        flex-direction: column;  
-        text-align: center; 
+        flex-direction: column;  /* Stack the image and text on smaller screens */
+        text-align: center;  /* Center-align text on small screens */
     }
 
     .aboutus-image {
-        max-width: 100%;  
+        max-width: 100%;  /* Make the image full width */
         margin-bottom: 20px;
     }
 
     .aboutus-text {
-        max-width: 100%;  
+        max-width: 100%;  /* Make the text full width */
     }
 }
 .aboutus-sub-text{
@@ -477,7 +496,7 @@ body {
 /* About Us Sub Text Section */
 .aboutus-sub-text {
     padding: 60px 20px;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9; /* Light gray background */
 }
 
 /* Container for Content */
@@ -493,7 +512,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Ensures elements stack on smaller screens */
 }
 
 /* Left Text Section */
@@ -607,7 +626,7 @@ body {
 }
 
 /* why choose us -about us  */
-
+/* General Styles for the Section */
 .why-choose-us-box {
   padding: 50px 20px;
   text-align: center;
@@ -724,48 +743,48 @@ body {
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
   .main-choose-box- {
-    flex-direction: column;  
+    flex-direction: column;  /* Stack the sub boxes vertically */
     align-items: center;
   }
 
   .choose-sub-box1 {
-    width: 80%;  
+    width: 80%;  /* Make sub boxes 80% of the container width on medium screens */
     margin-bottom: 20px;
   }
 
   .choose-sub-box h3 {
-    font-size: 20px;  
+    font-size: 20px;  /* Adjust title size */
   }
 
   .choose-sub-box p {
-    font-size: 14px;  
+    font-size: 14px;  /* Adjust paragraph size for readability */
   }
 
   .choose-sub-box1 .icon {
-    font-size: 40px;  
+    font-size: 40px;  /* Reduce icon size for smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
   .why-choose-us-box {
-    padding: 30px 15px;  
+    padding: 30px 15px;  /* Reduce padding for very small screens */
   }
 
   .choose-sub-box1 {
-    width: 90%;  
+    width: 90%;  /* Sub boxes take up 90% width on very small screens */
   }
 
   .choose-sub-box h3 {
-    font-size: 18px;  
+    font-size: 18px;  /* Adjust title size for smaller screens */
   }
 
   .choose-sub-box p {
-    font-size: 12px;  
+    font-size: 12px;  /* Further reduce paragraph size */
+  }
 
   .choose-sub-box1 .icon {
-    font-size: 35px;  
+    font-size: 35px;  /* Further reduce icon size */
   }
-}
 }
 /* ourt team section  */
 .container {
@@ -792,8 +811,9 @@ header p {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* This ensures that on smaller screens, the profiles wrap to the next line */
 }
+
 .profile {
   background-color: white;
   padding: 20px;
@@ -801,7 +821,7 @@ header p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: transform 0.3s ease;
-  margin-bottom: 20px; 
+  margin-bottom: 20px; /* Added margin for spacing between profiles */
 }
 
 .profile:hover {
@@ -870,52 +890,52 @@ button:hover {
 @media screen and (max-width: 768px) {
   .leadership-section {
     flex-direction: column;
-    align-items: center; 
+    align-items: center; /* Center the profiles vertically */
   }
 
   .profile {
-    width: 80%; 
+    width: 80%; /* Make the profiles take up 80% of the container width */
     margin-bottom: 20px;
   }
 
   header h1 {
-    font-size: 24px; 
+    font-size: 24px; /* Adjust the font size for smaller screens */
   }
 
   header p {
-    font-size: 16px; 
+    font-size: 16px; /* Adjust paragraph font size */
   }
 
   .profile-img {
-    width: 120px; 
+    width: 120px; /* Resize the image for smaller screens */
     height: 120px;
   }
 
   button {
-    width: 100%; 
+    width: 100%; /* Make buttons full width on mobile */
   }
 
   .social-icon {
-    font-size: 14px; 
+    font-size: 14px; /* Adjust social icon font size */
     padding: 8px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .container {
-    width: 90%; 
+    width: 90%; /* Increase container width on very small screens */
   }
 
   header h1 {
-    font-size: 22px; 
+    font-size: 22px; /* Smaller heading font size for very small screens */
   }
 
   header p {
-    font-size: 14px; 
+    font-size: 14px; /* Adjust paragraph font size for very small screens */
   }
 
   .profile-img {
-    width: 100px; 
+    width: 100px; /* Further reduce the profile image size */
     height: 100px;
   }
 
@@ -924,7 +944,8 @@ button:hover {
   }
 
   .social-icon {
-    font-size: 12px; 
+    font-size: 12px; /* Reduce the font size of social icons */
+    padding: 6px;
   }
 }
 
@@ -983,7 +1004,7 @@ button:hover {
 /* Right Section Styling */
 .right-section {
   width: 45%;
-  padding: 20px;
+  padding-left: 20px;
   padding-top: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
