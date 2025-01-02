@@ -10,8 +10,11 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #000000;
+
   color: #333;
+  scroll-behavior: smooth;
+
+  
 }
 
 /* Main Header */
@@ -117,6 +120,7 @@ body {
   padding: 0 20px;
   flex-direction: column;
   flex-wrap: wrap;
+  
 }
 
 /* Keyframe for the Background Animation */
@@ -142,6 +146,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 20vh;
 }
 
 /* Left Main Section */
@@ -1203,9 +1208,10 @@ button:hover {
 /* our services section  */
 /* Base styles */
 .our-services {
-  width: 100%;
+max-width: 1314px;
   padding: 50px 20px;
   margin-top: 50px;
+  justify-content: center;
 }
 
 .main-services {
@@ -1351,5 +1357,424 @@ button:hover {
 
   .box p {
     font-size: 12px; /* Smaller text for small screens */
+  }
+}
+
+/* home center ext and number  */
+/* Home center styling */
+.home-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+/* Sub home center styling */
+.sub-home-center {
+  text-align: center;
+ margin-top: 30px;
+ display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Button styling */
+.sub-home-center button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.sub-home-center button:hover {
+  background-color: #0056b3;
+}
+
+/* Image styling */
+.sub-home-center img {
+  width: 100px;  /* Adjust the image size */
+  height: auto;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+/* Paragraph styling */
+.sub-home-center p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* Phone number styling */
+.sub-home-center p:first-of-type {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+/* Expert text styling */
+.sub-home-center p:last-of-type {
+  font-style: italic;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+/* center-image marqueee  */
+
+
+section.image-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.image-container-marquee .home-center-marquee{
+  width: 100px;  /* You can adjust the size of the images */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Animation to make the images scroll horizontally */
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+ /* Process we follow section  */
+
+/* Box Section */
+.box-section {
+display: flex;
+flex-wrap: wrap;
+  gap: 20px;
+  /* padding: 20px; */
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1314px;
+}
+.home-header-box {
+  grid-column: span 4; /* Ensure the header spans the full width */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-header-box h3 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 60px;
+}
+/* Box Styling */
+.box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Set initial opacity and scaling */
+  opacity: 0;
+  transform: scale(0.9);
+  
+  /* Apply the animation */
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.2s; /* Delay for each box */
+}
+
+/* Image styling */
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Heading styling */
+.box h1 {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+/* Paragraph (Number) styling */
+.box p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Adjust animation delay for each box */
+.box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.box:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.box:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.box:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.box:nth-child(6) {
+  animation-delay: 0.7s;
+}
+.box:nth-child(7) {
+  animation-delay: 0.8s;
+}
+.box:nth-child(8) {
+  animation-delay: 0.9s;
+}
+
+/* Hover effect for each box */
+.box:hover {
+  transform: scale(1.05); /* Slightly enlarge the box */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase the shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Hover effect on text */
+.box:hover h1, .box:hover p {
+  color: #0073e6; /* Change color of text on hover */
+}
+
+
+
+/* Pricing Section */
+.pricing-section {
+
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+/* Header Section */
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2f3542;
+  margin-bottom: 40px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #4c5c68;
+  color: #fff;
+  padding: 12px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6f61;
+}
+
+button.active {
+  background-color: #ff6f61;
+}
+
+/* Pricing Cards Section */
+.pricing-section {
+  
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Header Section */
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2f3542;
+  margin-bottom: 40px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #4c5c68;
+  color: #fff;
+  padding: 12px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6f61;
+}
+
+button.active {
+  background-color: #ff6f61;
+}
+
+/* Pricing Cards Section */
+.pricing-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Base Pricing Card Style */
+.pricing-card {
+
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Individual Card Border Animations */
+.startup {
+  border: 3px solid #ff6f61;
+}
+
+.basic {
+  border: 3px solid #4c5c68;
+}
+
+.standard {
+  border: 3px solid #2f3542;
+}
+
+/* Scroll-triggered Animation for Pricing Cards */
+.pricing-card.show {
+  animation: zoomIn 0.5s forwards; /* Zoom-in and pop-up effect */
+}
+
+@keyframes zoomIn {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Card Hover Effect */
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.card-header p {
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.card-body h4 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.card-body ul {
+  text-align: left;
+  padding-left: 20px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-body ul li {
+  margin-bottom: 12px;
+}
+
+.order-btn {
+  background-color: #4c5c68;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #ff6f61;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pricing-cards {
+      flex-direction: column;
+      align-items: center;
   }
 }
