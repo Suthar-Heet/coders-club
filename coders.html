@@ -22,13 +22,24 @@
                 <ul>
                     <li><a href="coders.html">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="/">Services</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Services</a>
+                        <div class="dropdown-content">
+                            <a href="website-design.html">Website Design</a>
+                            <a href="#">Application Development</a>
+                            <a href="#">Digital Marketing</a>
+                            <a href="#">Social Media Marketing</a>
+                            <a href="#">SEO Optimization</a>
+                            <a href="#">Domain & Hosting</a>
+                        </div>
+                    </li>
                     <li><a href="/">Pricing Plan</a></li>
                     <li><a href="/">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    
     <!-- Home Section -->
     <section class="home-wrapper">
         <div class="container-home">
@@ -53,6 +64,7 @@
                 </div>
             </div>
         </div>
+    </section>
         <!-- our services section  -->
         <section class="our-services">
             <div class="main-services">
@@ -69,65 +81,67 @@
                 
                 <div class="sub-main-services">
                     <div class="box">
-                        <img src="your-image.png" alt="Image">
-                        <h3>Your Heading</h3>
+                        <img src="./images/home-page/web development.png" alt="Image">
+                        <h3>Website Design</h3>
                         <p>This is a paragraph inside the box. It can contain any text you like.</p>
                         <a href="/">Click here for more information</a>
                     </div>
                 </div>
                 <div class="sub-main-services">
                     <div class="box">
-                        <img src="your-image.png" alt="Image">
-                        <h3>Your Heading</h3>
+                        <img src="./images/home-page/app-development_10950217.png" alt="Image">
+                        <h3>Application Development</h3>
                         <p>This is a paragraph inside the box. It can contain any text you like.</p>
                         <a href="/">Click here for more information</a>
                     </div>
                 </div>
                 <div class="sub-main-services">
                     <div class="box">
-                        <img src="your-image.png" alt="Image">
-                        <h3>Your Heading</h3>
+                        <img src="./images/home-page/digital-marketing.png" alt="Image">
+                        <h3>Digital Marketing</h3>
                         <p>This is a paragraph inside the box. It can contain any text you like.</p>
                         <a href="/">Click here for more information</a>
                     </div>
                 </div>
                 <div class="sub-main-services">
                     <div class="box">
-                        <img src="your-image.png" alt="Image">
-                        <h3>Your Heading</h3>
+                        <img src="./images/home-page/social-media_2518048.png" alt="Image">
+                        <h3>Social Media Marketing</h3>
                         <p>This is a paragraph inside the box. It can contain any text you like.</p>
                         <a href="/">Click here for more information</a>
                     </div>
                 </div>
                 <div class="sub-main-services">
                     <div class="box">
-                        <img src="your-image.png" alt="Image">
-                        <h3>Your Heading</h3>
+                        <img src="./images/home-page/Domin & web hosting.png" alt="Image">
+                        <h3>Domain & Web Hosting</h3>
                         <p>This is a paragraph inside the box. It can contain any text you like.</p>
                         <a href="/">Click here for more information</a>
                     </div>
                 </div>
                 <div class="sub-main-services">
                     <div class="box">
-                        <img src="your-image.png" alt="Image">
-                        <h3>Your Heading</h3>
+                        <img src="./images/home-page/Branding.png" alt="Image">
+                        <h3>Branding</h3>
                         <p>This is a paragraph inside the box. It can contain any text you like.</p>
                         <a href="/">Click here for more information</a>
                     </div>
                 </div>
 
             </div>
-            <div class="home-center">
-                <div class="sub-home-center">
-                  
-                    <img src="./images/home-page/thumbs-up.avif" alt="">
-                    <!-- <p>+91 1234567890</p> -->
-                    <p>Are you looking for a reliable service provider / dedicated developer for Odoo?</p>
-                    <button>Get Start</button>
-                </div>
-            </div>
+            <!-- home center  -->
+             
+           
         </section>
-     
+        <div class="home-center">
+          <div class="sub-home-center">
+            
+              <img src="./images/home-page/thumbs-up.avif" alt="">
+              <!-- <p>+91 1234567890</p> -->
+              <p>Are you looking for a reliable service provider / dedicated developer for Odoo?</p>
+              <button>Get Start</button>
+          </div>
+      </div>
         <!-- set section vedio   -->
         <section class="image-marquee">
             <div class="image-container-marquee">
@@ -191,111 +205,122 @@
 
           <section class="pricing-section">
             <div class="pricing-container">
-                <h2>Choose Your Plan</h2>
-    
-                <!-- Pricing toggle buttons -->
-                <div class="toggle-buttons">
-                    <button id="monthly-btn" class="active">Monthly</button>
-                    <button id="annually-btn">Annually</button>
+              <h2>Choose Your Plan</h2>
+          
+              <!-- Pricing toggle buttons -->
+              <div class="toggle-buttons">
+                <button id="monthly-btn" class="active">Monthly</button>
+                <button id="annually-btn">Annually</button>
+              </div>
+          
+              <div class="pricing-cards">
+                <!-- Startup Package -->
+                <div class="pricing-card startup">
+                  <div class="card-header">
+                    <h3>Startup Package</h3>
+                    <p>Ideal for startups</p>
+                  </div>
+                  <div class="card-body">
+                    <h4><span class="price-value" data-monthly="39" data-annually="399">39</span> USD</h4>
+                    <p>Per Month</p>
+                    <ul>
+                      <li>22 posts per month Including festivals</li>
+                      <li>2 Videos per month</li>
+                      <li>2 Social platforms included</li>
+                      <li>Integrated hashtag strategy</li>
+                      <li>No long-term contracts</li>
+                    </ul>
+                    <button class="order-btn">Order Now</button>
+                  </div>
                 </div>
-    
-                <div class="pricing-cards">
-                    <!-- Startup Package -->
-                    <div class="pricing-card startup">
-                        <div class="card-header">
-                            <h3>Startup Package</h3>
-                            <p>Ideal for startups</p>
-                        </div>
-                        <div class="card-body">
-                            <h4>₹ 3000.00</h4>
-                            <p><span class="price-value" data-monthly="3000" data-annually="30000">3000</span> Per Month</p>
-                            <ul>
-                                <li>22 posts per month Including festivals</li>
-                                <li>2 Videos per month</li>
-                                <li>2 Social platforms included</li>
-                                <li>Integrated hashtag strategy</li>
-                                <li>No long-term contracts</li>
-                            </ul>
-                            <button class="order-btn">Order Now</button>
-                        </div>
-                    </div>
-    
-                    <!-- Basic Plan -->
-                    <div class="pricing-card basic">
-                        <div class="card-header">
-                            <h3>Basic Plan</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4><span class="price-value" data-monthly="19" data-annually="199">19</span> USD</h4>
-                            <ul>
-                                <li>Basic Features</li>
-                                <li>1 Platform Included</li>
-                            </ul>
-                            <button class="order-btn">Order Now</button>
-                        </div>
-                    </div>
-    
-                    <!-- Standard Plan -->
-                    <div class="pricing-card standard">
-                        <div class="card-header">
-                            <h3>Standard Plan</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4><span class="price-value" data-monthly="39" data-annually="399">39</span> USD</h4>
-                            <ul>
-                                <li>Standard Features</li>
-                                <li>2 Platforms Included</li>
-                            </ul>
-                            <button class="order-btn">Order Now</button>
-                        </div>
-                    </div>
+          
+                <!-- Basic Plan -->
+                <div class="pricing-card basic">
+                  <div class="card-header">
+                    <h3>Basic Plan</h3>
+                  </div>
+                  <div class="card-body">
+                    <h4><span class="price-value" data-monthly="39" data-annually="399">39</span> USD</h4>
+                    <ul>
+                      <li>Basic Features</li>
+                      <li>1 Platform Included</li>
+                    </ul>
+                    <button class="order-btn">Order Now</button>
+                  </div>
                 </div>
+          
+                <!-- Standard Plan -->
+                <div class="pricing-card standard">
+                  <div class="card-header">
+                    <h3>Standard Plan</h3>
+                  </div>
+                  <div class="card-body">
+                    <h4><span class="price-value" data-monthly="39" data-annually="399">39</span> USD</h4>
+                    <ul>
+                      <li>Standard Features</li>
+                      <li>2 Platforms Included</li>
+                    </ul>
+                    <button class="order-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+          
     
     </section>
       <!-- footer section  -->
       <footer class="footer">
         <div class="container">
-          <div class="logo-section">
-            <img src="" alt="CODERS CLUB">
-            <h1>CODERS CLUB </h1>
-            <p>Your Choice... Our Promise...</p>
+          <!-- Company Name and Social Media Icons Section -->
+          <div class="company-section">
+            <div class="logo-section">
+              <img src="./images/footer/Coders-Club-removebg-preview.png" alt="CODERS CLUB">
+              <h1>CODERS CLUB</h1>
+              <p>Your Choice... Our Promise...</p>
+            </div>
+      
+            <!-- Social Media Icons Below Company Name -->
             <div class="social-icons">
-              <a href="#"><i class="icon-facebook"></i></a>
-              <a href="#"><i class="icon-instagram"></i></a>
-              <a href="#"><i class="icon-twitter"></i></a>
-              <a href="#"><i class="icon-linkedin"></i></a>
+              <a href="#"><img src="./images/footer/facebook-round-svgrepo-com.svg" alt="Facebook"></a>
+              <a href="#"><img src="./images/footer/instagram-svgrepo-com.svg" alt="Instagram"></a>
+              <a href="#"><img src="./images/footer/twitter-round-svgrepo-com.svg" alt="Twitter"></a>
+              <a href="#"><img src="./images/footer/internet-linkedln-media-svgrepo-com.svg" alt="LinkedIn"></a>
             </div>
           </div>
-          <div class="footer-section contact-info">
+      
+          <!-- Contact Info Section -->
+          <div class="contact-info">
             <h2>CONTACT INFO</h2>
-            <p>📞 +91 1234567890</p>
-            <p>✉️ abc@gmail.com</p>
-            <!-- <p>📍 A-701 Akshar 42, NR Anand party plot new ranip road, new ranip, Ahmedabad, 382480 </p> -->
+            <p><img src="./images/footer/phone-svgrepo-com.svg" alt="Phone"> +91 1234567890</p>
+            <p><img src="./images/footer/email-svgrepo-com.svg" alt="Email"> abc@gmail.com</p>
+            <!-- <p><img src="location-icon.svg" alt="Location"> A-701 Akshar 42, NR Anand party plot new ranip road, new ranip, Ahmedabad, 382480</p> -->
           </div>
-          <div class="footer-section services">
+      
+          <!-- Services Section with Arrow SVG on Left -->
+          <div class="services">
             <h2>SERVICES</h2>
             <ul>
-              <li>Website Design</li>
-              <li>Web Development</li>
-              <li>Digital Marketing</li>
-              <li>Domain and Web Hosting</li>
-              
+              <li><img src="./images/footer/arrow-open-end-svgrepo-com.svg" alt="Arrow"> Website Design</li>
+              <li><img src="./images/footer/arrow-open-end-svgrepo-com.svg" alt="Arrow"> Web Development</li>
+              <li><img src="./images/footer/arrow-open-end-svgrepo-com.svg" alt="Arrow"> Digital Marketing</li>
+              <li><img src="./images/footer/arrow-open-end-svgrepo-com.svg" alt="Arrow"> Domain and Web Hosting</li>
             </ul>
           </div>
-          <div class="footer-section newsletter">
+      
+          <!-- Newsletter Subscription Section with SVG beside email -->
+          <div class="newsletter">
             <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
             <p>Sign up for our newsletter to get the latest updates. Do not worry, we will never spam you.</p>
-            <form>
+            <form  class="form-footer">
               <input type="email" placeholder="Email Address">
-              <button type="submit">📩</button>
+              <button type="submit"><img src="./images/footer/email-svgrepo-com.svg" alt="Send"></button>
             </form>
           </div>
         </div>
         <div class="footer-bottom">
           <p>© 2024 CODERS CLUB . All rights reserved.</p>
         </div>
-      </footer> 
+      </footer>
 </body>
 </html>
