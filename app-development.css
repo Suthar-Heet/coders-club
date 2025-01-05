@@ -1,0 +1,896 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
+  animation: gradientAnimation 7s ease infinite;
+
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* Header section  */
+/* Header section  */
+
+.main-header {
+ 
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+/* Logo Section */
+.logo-left h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* On Logo Hover - Makes it slightly bigger */
+.logo-left h1:hover {
+  transform: scale(1.1);
+}
+
+/* Header Right Section */
+.header-right ul {
+  display: flex;
+  list-style: none;
+  gap: 22px;
+}
+
+.header-right ul li {
+  margin: 0 20px;
+}
+
+.header-right ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Links */
+.header-right ul li a:hover {
+  color: #3498db;
+  transform: translateY(-5px);
+}
+
+/* Sticky Header Effect on Scroll */
+.main-header.sticky {
+  background-color: #222;
+  padding: 10px 40px;
+}
+
+
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Show the dropdown when button is clicked (JavaScript toggling will work here) */
+.show {
+  display: block;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .header-right ul {
+      text-align: center;
+      width: 100%;
+  }
+  .header-right ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+
+/* first section  */
+.hero {
+  position: relative;
+  text-align: center;
+  /* background: linear-gradient(135deg, #FF6F61, #FF5F98); */
+  color: white;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  background-color: #FF6F61;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF3D28;
+  transform: scale(1.1);
+}
+
+.particle-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/white-rings.png') repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  animation: moveParticles 6s linear infinite;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  width: 30%;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.development-journey {
+  text-align: center;
+  padding: 60px 20px;
+  background: #F4F4F4;
+}
+
+.journey-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ffcc00;
+}
+
+.journey-path {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.journey-step {
+  width: 20%;
+  padding: 30px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+}
+
+.journey-step h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.journey-step p {
+  font-size: 1.1em;
+  color: #bbb;
+}
+
+.journey-step:hover {
+  transform: scale(1.05);
+  background-color: #444;
+}
+
+.journey-step::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #ffcc00;
+  border-radius: 50%;
+  animation: moveDot 3s linear infinite;
+  transform: translateX(-50%);
+}
+
+@keyframes moveDot {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+.cta-footer {
+  padding: 50px 20px;
+  background-color: #FF5F98;
+  color: white;
+  text-align: center;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInStep {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes moveParticles {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
+/* General Styles */
+.mobile-app-procedure-section {
+  padding: 40px 20px;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.procedure-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.procedure-left-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.procedure-left-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.procedure-right-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.procedure-right-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.procedure-right-text h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.procedure-right-text p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+/* Add animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation to the image */
+.procedure-left-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  animation: fadeInLeft 1.5s ease-out;
+}
+
+/* Apply animation to the text */
+.procedure-right-text {
+  flex: 1;
+  max-width: 50%;
+  animation: fadeInRight 1.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .procedure-content {
+    flex-direction: column;
+  }
+
+  .procedure-left-image, .procedure-right-text {
+    max-width: 100%;
+  }
+
+  /* Add delay for staggered effect on smaller screens */
+  .procedure-left-image img {
+    animation-delay: 0.2s;
+  }
+
+  .procedure-right-text {
+    animation-delay: 0.4s;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .procedure-content {
+    flex-direction: column;
+  }
+
+  .procedure-left-image, .procedure-right-text {
+    max-width: 100%;
+  }
+}
+
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #f8f9fa; 
+    padding: 20px 0; /* optional padding */
+    display: flex;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .cta-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Align the button to the right */
+  .container a.cta-button {
+    margin-left: auto;
+  }
+  
+  /* Align the button to the right */
+  .container a.cta-button {
+    margin-left: auto;
+  }
+
+/* App Development Benefits Section Styles */
+/* App Development Benefits Section Styles */
+.app-development-benefits-section {
+    padding: 60px 0;
+    /* background-color: #f9f9f9; */
+  }
+  
+  .app-development-benefits {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    flex-direction: row-reverse; 
+  }
+  
+  .app-development-benefits .benefits-image {
+    flex: 1 1 50%;
+    text-align: right; 
+  }
+  .app-development-benefits .benefits-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-development-benefits .benefits-text {
+    flex: 1 1 50%;
+    text-align: left; 
+  }
+  
+  .app-development-benefits .benefits-text h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .app-development-benefits .benefits-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .app-development-benefits {
+      flex-direction: column; 
+    }
+  
+    .app-development-benefits .benefits-text,
+    .app-development-benefits .benefits-image {
+      flex: 1 1 100%;
+    }
+  
+    .app-development-benefits .benefits-image {
+      text-align: center; 
+    }
+  }
+  
+/* Footer section  */
+.footer {
+    background: linear-gradient(135deg, rgb(0 0 0) 0%, rgb(0 26 43) 100%);
+    color: #fff;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .company-section {
+    flex: 1;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+  }
+  
+  .logo-section {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .logo-section h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .logo-section h1:hover {
+    transform: translateY(-10px) scale(1.1); 
+    color: #ff7f00;
+  }
+  
+  .logo-section p {
+    font-size: 18px;
+    margin: 10px 0;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+  }
+  
+  .logo-section p:hover {
+    opacity: 0.7; 
+    transform: translateX(10px);
+  }
+  /* Logo Section Styling */
+  .logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-section:hover {
+    transform: translateY(-10px); 
+  }
+  
+  /* Logo Image */
+  .logo-section img {
+    width: 100px; 
+    height: auto;
+   
+    transition: transform 0.3s ease, opacity 0.5s ease;
+  }
+  
+  .logo-section img:hover {
+    transform: rotate(360deg); 
+    opacity: 0.8; 
+  }
+  
+  /* Logo Title (h1) Styling */
+  .logo-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .logo-section h1:hover {
+    color: #ff7f00; 
+    transform: translateY(-5px); 
+  }
+  
+  /* Logo Tagline (p) Styling */
+  .logo-section p {
+    font-size: 18px;
+    color: #bbb;
+    margin: 10px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .logo-section p:hover {
+    transform: translateX(10px); 
+    opacity: 0.8; 
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+  }
+  
+  .social-icons a:hover img {
+    transform: rotate(360deg) scale(1.2); 
+    opacity: 0.8;
+  }
+  
+  /* Contact Info Section */
+  .contact-info {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out; 
+  }
+  
+  .contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-info h2:hover {
+    transform: translateY(-5px) rotate(5deg); 
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-info p:hover {
+    color: #ff7f00;
+    transform: translateX(10px);
+  }
+  
+  .contact-info p img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, rotate 0.3s ease;
+  }
+  
+  .contact-info p img:hover {
+    transform: rotate(360deg) scale(1.1); 
+  }
+  
+  /* Services Section with Arrow SVG on Left */
+  .services {
+    flex: 1;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out; 
+  }
+  
+  .services h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .services h2:hover {
+    transform: translateY(-10px) rotate(5deg); 
+  }
+  
+  .services ul {
+    list-style: none;
+  }
+  
+  .services ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .services ul li:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+  }
+  
+  .services img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s ease, rotate 0.3s ease;
+  }
+  
+  .services img:hover {
+    transform: rotate(360deg) scale(1.3); 
+  }
+  
+  /* Newsletter form styling */
+  .newsletter {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .newsletter h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .newsletter h2:hover {
+    transform: translateY(-5px) scale(1.05); 
+  }
+  
+  .newsletter p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .newsletter input[type="email"]:focus {
+    border-color: #ff7f00;
+  }
+  
+  .newsletter button {
+    background-color: #ff7f00;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .newsletter button:hover {
+    background-color: #e66b00;
+    transform: scale(1.1); 
+  }
+  
+  .newsletter button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  .form-footer{
+    display: flex;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  
+  .footer-bottom p {
+    color: #bbb;
+  }
+  
+  /* Unique Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo-section, .contact-info, .services, .newsletter {
+      flex: 1 1 100%;
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .social-icons a {
+      margin-right: 10px;
+    }
+  
+    /* Adjusting newsletter input and button layout for mobile */
+    .newsletter {
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .newsletter input[type="email"] {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .newsletter button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-section h1 {
+      font-size: 30px;
+    }
+  
+    .footer-section h2 {
+      font-size: 20px;
+    }
+  
+    .footer-section p, .footer-section ul li {
+      font-size: 16px;
+    }
+  }
+  

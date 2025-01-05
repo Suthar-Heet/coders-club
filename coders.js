@@ -105,3 +105,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// Add hover App effects to hero button
+// Particle background movement animation (Optional)
+// Scroll-triggered animations for the Development Journey
+document.addEventListener("scroll", function() {
+  let scrollPosition = window.scrollY;
+  let steps = document.querySelectorAll('.journey-step');
+
+  steps.forEach(step => {
+      if (scrollPosition > step.offsetTop - window.innerHeight + 100) {
+          step.classList.add('reveal');
+      } else {
+          step.classList.remove('reveal');
+      }
+  });
+});
+
+// Optional: Add a smooth scrolling effect to the path
+const steps = document.querySelectorAll('.journey-step');
+steps.forEach(step => {
+  step.addEventListener('click', function() {
+      alert(`You clicked on: ${step.querySelector('h3').textContent}`);
+  });
+});
